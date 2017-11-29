@@ -3,6 +3,8 @@ console.log('linked');
 // Build Deck
 
 	// suits, values, deck
+	// var suits = ['Spades', 'Hearts', 'Diamonds', 'Clubs'];
+	// var values = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
 
 // Shuffle Function
 
@@ -34,4 +36,4 @@ console.log('linked');
 
 // Win Function
 
-	// rounds won or money earned shoulf trigger this function?
+	// rounds won or money earned should trigger this function?
