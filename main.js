@@ -34,6 +34,5 @@ console.log('linked');
 
 	// should trigger game function
 
-// Win Function
-
-	// rounds won or money earned should trigger this function?
+// Reset Function
+	// reset hand after each turn
