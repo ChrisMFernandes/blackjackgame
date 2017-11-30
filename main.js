@@ -11,15 +11,20 @@ console.log('linked');
 
 // Shuffle Function
 
-	// function shuffleDeck()
+	// function shuffleDeck(){
+		// for (var i = 0; i < 1000; i++)
+	// }
 	// find algorithm
 
 // Create Players 
 
 	// player and dealer
+	// var player = new player;
+	// var dealer = new dealer;
 
 // Bets Function
 	
+	// function setCash()
 	// function bet()
 	// add monetary value plus functionality that adds to pot if hand won
 	// player wallet will need to decrease if hand is lost
@@ -27,7 +32,10 @@ console.log('linked');
 
 // Deal Function
 	
-	// function dealCards()
+	// function dealCards(){
+		// for (var i = 0; i < 2; i++)
+	//}
+	// 
 	// deal two players two cards each
 	// how do I deal two random cards to each player?
 
@@ -37,15 +45,18 @@ console.log('linked');
 
 // Hit Function
 	
-	// function hit()
+	// function hit(){
+		// var card 1 = dealCards();
+		// var card 2 = dealCards();
+	// }
 	// adds one card to player hand plus adds value of card dealt
 
 // Stay/Call Function
 
 	// function stay()
 	// should trigger game function
-	// how will other player know to hit untill bust or win?
-	// other player always stay when dealt 17
+	// how will dealer know to hit until bust or win?
+	// dealer always stay when dealt 17
 
 // Reset Function
 	// reset hand after each turn
