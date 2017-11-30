@@ -48,12 +48,14 @@ console.log('linked');
 	// function hit(){
 		// var card 1 = dealCards();
 		// var card 2 = dealCards();
-	// }
+	//  }
 	// adds one card to player hand plus adds value of card dealt
 
 // Stay/Call Function
 
-	// function stay()
+	// function stay(){
+		// if (currentPlayer != players.length-1)
+	// }
 	// should trigger game function
 	// how will dealer know to hit until bust or win?
 	// dealer always stay when dealt 17
