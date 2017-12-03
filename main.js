@@ -1,12 +1,21 @@
 console.log('linked');
 
+var deal = document.getElementById('deal');
+var hit = document.getElementById('hit');
+var call = document.getElementById('call');
+
+deal.addEventListener('click', dealCards);
+hit.addEventListener('click', hit);
+call.addEventListener('click', stay);
+
 // Build Deck
 
 	// suits, values, deck
 	var suits = ['Spades', 'Hearts', 'Diamonds', 'Clubs'];
 	var values = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+	var deck = new Array();
 		function createDeck(){
-			var deck = new Array();
+			deck = new Array();
 			for (var i = 0; i < values.length; i++){
 				for (var x = 0; x < suits.length; x++){
 					var number = parseInt(values[i]);
@@ -20,17 +29,33 @@ console.log('linked');
 			}
 		};
 
-/* Shuffle Function
+ // Shuffle Function
 
-	 function shuffleDeck(){
-		for (var i = 0; i < 1000; i++)
-	 }
-	 find algorithm*/
+	 	function shuffleDeck(){
+			for (var i = 0; i < 1000; i++){
+			var hand1 = Math.floor((Math.random() * deck.length));
+			var hand2 = Math.floor((Math.random() * deck.length));
+			var map = deck[hand1];
+			deck[hand1] = deck[hand2];
+			deck[hand2] = map;
+		}
+
+	 };
 
 // Create Players 
 
-	var player = new player;
-	var dealer = new dealer;
+	var players = new Array();
+	var currentPlayer = 0;
+		function createPlayers(num){
+			players = new Array();
+			for(var i = 1; i <= num; i++){
+		
+			var hand = new Array();
+			var player = { Name: 'Player ' + i, ID: i, Points: 0, Hand: hand };
+			players.push(player);
+		}
+	};
+
 
 /* Bets Function
 	
@@ -41,15 +66,22 @@ console.log('linked');
 	player will not be able to continue to play if wallet = 0
 */
 
-/* Deal Function
+// Deal Function
 	
 	function dealCards(){
-		for (var i = 0; i < 2; i++)
-	}
+		for (var i = 0; i < 2; i++){
+			for (var x = 0; x < players.length; x++){
+				var card = deck.pop();
+				players[x].Hand.push(card);
+			}
+		}
+
+		updateDeck();
+	};
 	 
-	deal two players two cards each
-	how do I deal two random cards to each player?
-*/
+// deal two players two cards each
+// how do I deal two random cards to each player?
+
 
 /* Render Cards
 
