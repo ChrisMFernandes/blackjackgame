@@ -8,25 +8,33 @@ deal.addEventListener('click', dealCards);
 hit.addEventListener('click', hit);
 call.addEventListener('click', stay);
 
-// Build Deck
+// Build Deck\
+
+function Card(suit, rank, value){
+	this.suit = suit;
+	this.rank = rank;
+	this.value = value;
+};
 
 	// suits, values, deck
 	var suits = ['Spades', 'Hearts', 'Diamonds', 'Clubs'];
 	var values = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+	
 	var deck = new Array();
+
 		function createDeck(){
 			deck = new Array();
 			for (var i = 0; i < values.length; i++){
 				for (var x = 0; x < suits.length; x++){
 					var number = parseInt(values[i]);
-					if (values[i] == 'J' || values[i] == 'Q' || values[i] == 'K')
-						number = 10;
-						else if(values[i] == 'A')
-						number = 11;
-						else(values[i] == 'A' + 'A')
-						number = 11;
+						if (values[i] == 'J' || values[i] == 'Q' || values[i] == 'K'){
+							deck.push(new Card(suits[x], 10));
+						}else if (values[i] == 'A'){
+							deck.push(new Card(suits[x], 1));
+						}else{
+							deck.push(new Card(suits[x], values[i]));
+					}
 				}
-			}
 		};
 
  // Shuffle Function
@@ -35,9 +43,9 @@ call.addEventListener('click', stay);
 			for (var i = 0; i < 1000; i++){
 			var hand1 = Math.floor((Math.random() * deck.length));
 			var hand2 = Math.floor((Math.random() * deck.length));
-			var map = deck[hand1];
+			var hand = deck[hand1];
 			deck[hand1] = deck[hand2];
-			deck[hand2] = map;
+			deck[hand2] = hand;
 		}
 
 	 };
@@ -110,4 +118,14 @@ call.addEventListener('click', stay);
 	reset hand after each turn
 	hands will need to clear and reshuffle each round
 */
+
+
+
+
+
+
+
+
+
+
 
