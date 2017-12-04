@@ -3,12 +3,13 @@ console.log('linked');
 var deal = document.getElementById('deal');
 var hit = document.getElementById('hit');
 var call = document.getElementById('call');
+var img = document.createElement('img');
 
 deal.addEventListener('click', dealCards);
 hit.addEventListener('click', hit);
 call.addEventListener('click', stay);
 
-// Build Deck\
+// Build Deck and shuffle
 
 function Card(suit, rank, value){
 	this.suit = suit;
@@ -35,25 +36,13 @@ function Card(suit, rank, value){
 							deck.push(new Card(suits[x], values[i]));
 					}
 				}
+			_.shuffle(deck);
 		};
 
- // Shuffle Function
 
-	 	function shuffleDeck(){
-			for (var i = 0; i < 1000; i++){
-			var hand1 = Math.floor((Math.random() * deck.length));
-			var hand2 = Math.floor((Math.random() * deck.length));
-			var hand = deck[hand1];
-			deck[hand1] = deck[hand2];
-			deck[hand2] = hand;
-		}
-
-	 };
-
-// Create Players 
+// Create Players
 
 	var players = new Array();
-	var currentPlayer = 0;
 		function createPlayers(num){
 			players = new Array();
 			for(var i = 1; i <= num; i++){
@@ -83,8 +72,6 @@ function Card(suit, rank, value){
 				players[x].Hand.push(card);
 			}
 		}
-
-		updateDeck();
 	};
 	 
 // deal two players two cards each
@@ -118,14 +105,3 @@ function Card(suit, rank, value){
 	reset hand after each turn
 	hands will need to clear and reshuffle each round
 */
-
-
-
-
-
-
-
-
-
-
-
