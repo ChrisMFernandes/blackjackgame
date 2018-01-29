@@ -1,3 +1,3 @@
 # blackjackgame
 
-Build a basic game of BlackJack with JavaScript.
+WDI JavaScript Capstone.
